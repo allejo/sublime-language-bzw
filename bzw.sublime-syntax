@@ -1,0 +1,113 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: BZW
+file_extensions:
+  - bzw
+scope: source.bzw
+contexts:
+  main:
+    # Comments
+    - match: '#'
+      scope: punctuation.definition.comment.bzw
+      push: line_comment
+
+
+    # Object Headers
+    - match: '\b(world|options|waterLevel|dynamicColor|textureMatrix|material|transform|physics)\b'
+      scope: keyword.control.bzw
+
+    # World Objects
+    - match: '\b(arc|base|box|cone|define|group|link|mesh|meshbox|meshpyr|pyramid|sphere|teleporter|tetra|weapon|zone|face|endface|enddef|drawInfo|lod|end)\b'
+      scope: keyword.control.bzw
+
+
+    # World Parameters
+    - match: '\b(size|flagHeight|noWalls|freeCtfSpawns)\b'
+      scope: storage.type.bzw
+
+    # Water Parameters
+    - match: '\b(height|materials)\b'
+      scope: storage.type.bzw
+
+    # Dynamic Colors
+    - match: '\b(red|green|blue|alpha)\b'
+      scope: storage.type.bzw
+
+    # Textmat Parameters
+    - match: '\b(scale|spin|shift|center|fixedscale|fixedspin|fixedshift)\b'
+      scope: storage.type.bzw
+
+    # Material Parameters
+    - match: '\b(texture|addtexture|notextures|notexcolor|notexalpha|texmat|dyncol|ambient|diffuse|color|specular|emission|shininess|resetmat|spheremap|noradar|noshadow|noculling|nosorting|nolighting|alphathresh|groupalpha|occluder)\b'
+      scope: storage.type.bzw
+
+    # Physics Parameters
+    - match: '\b(linear|angular|slide|death)\b'
+      scope: storage.type.bzw
+
+    # Arc Parameters
+    - match: '\b(divisions|flatshading|angle|ratio|position|rotation|size|shift|shear|scale|spin|texsize|phydrv|ricochet|smoothbounce|matref|top|bottom|inside|outside|startside|endside)\b'
+      scope: storage.type.bzw
+
+    # Position Parameters
+    - match: '\b(pos|position|size|rot|rotation)\b'
+      scope: storage.type.bzw
+
+    # Phaseable parameters
+    - match: '\b(passable|drivethrough|shootthrough|ricochet)\b'
+      scope: storage.modifier.bzw
+
+    # Base Parameters
+    - match: '\b(color|oncap)\b'
+      scope: storage.type.bzw
+
+    # Box Parameters
+    - match: '\b(top|bottom|sides|obstacle|outside|texsize|texoffset)\b'
+      scope: storage.type.bzw
+
+    # Teleporter Parameters
+    - match: '\b(border|from|to)\b'
+      scope: storage.type.bzw
+
+    # Mesh Parameters
+    - match: '\b(vertex|normal|texcoord|noclusters|passable|vertices|normals|texcoords)\b'
+      scope: storage.type.bzw
+
+    # Pyramid Parameters
+    - match: '\b(edge|bottom|startside|endside|flipz|angle)\b'
+      scope: storage.type.bzw
+
+    # Sphere Parameters
+    - match: '\b(hemisphere|hemi|radius)\b'
+      scope: storage.type.bzw
+
+    # World Weapon Parameters
+    - match: '\b(tilt|initdelay|delay|type|trigger|eventteam)\b'
+      scope: storage.type.bzw
+
+    # Zone Parameters
+    - match: '\b(zoneflag|flag|safety)\b'
+      scope: storage.type.bzw
+
+    # Misc Parameters
+    - match: '\b(name|phydrv|team|tint)\b'
+      scope: storage.type.bzw
+
+
+    # Options Block Settings
+    - match: '(-)\b(a|adminlagannounce|admsg|advertise|autoTeam|b|c|cr|density|disableBots|f|fb|g|h|handicap|help|helpmsg|j|jitterdrop|jitterwarn|lagannounce|lagdrop|lagwarn|maxidle|mp|mps|ms|mts|offa|packetlossdrop|packetlosswarn|poll|q||rabbit|s|sa|sb|set|sl|spamtime|spamwarn|speedtol|srvmsg|st|sw|synctime|t|tftimeout|time|timemanual|tk|printscore|tkkr|trackplayhistory|vars|worldsize)\b'
+      scope: constant.language.bzw
+
+    - match: '(\+)\b(f|r|s)\b'
+      scope: constant.language.bzw
+
+
+    # Numbers
+    - match: '\b(-)?[0-9.e]+\b'
+      scope: constant.numeric.bzw
+
+  line_comment:
+    - meta_scope: comment.line.bzw
+    - match: $
+      pop: true
