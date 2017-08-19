@@ -8,6 +8,12 @@
   <string>source.bzw</string>
   <key>settings</key>
   <dict>
+    <key>decreaseIndentPattern</key>
+    <string>(end|endface|enddef)</string>
+
+    <key>increaseIndentPattern</key>
+    <string>(world|options|waterLevel|dynamicColor|textureMatrix|material|transform|physics|arc|base|box|cone|define|group|link|mesh|meshbox|meshpyr|pyramid|sphere|teleporter|tetra|weapon|zone|face|drawInfo|lod)</string>
+
     <key>shellVariables</key>
     <array>
       <dict>
