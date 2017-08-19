@@ -95,6 +95,11 @@ contexts:
       scope: storage.type.bzw
 
 
+    # Numbers
+    - match: '(-?\d*\.{0,1}\d+)\b'
+      scope: constant.numeric.bzw
+
+
     # Options Block Settings
     - match: '(-)\b(a|adminlagannounce|admsg|advertise|autoTeam|b|c|cr|density|disableBots|f|fb|g|h|handicap|help|helpmsg|j|jitterdrop|jitterwarn|lagannounce|lagdrop|lagwarn|maxidle|mp|mps|ms|mts|offa|packetlossdrop|packetlosswarn|poll|q||rabbit|s|sa|sb|set|sl|spamtime|spamwarn|speedtol|srvmsg|st|sw|synctime|t|tftimeout|time|timemanual|tk|printscore|tkkr|trackplayhistory|vars|worldsize)\b'
       scope: constant.language.bzw
@@ -103,9 +108,6 @@ contexts:
       scope: constant.language.bzw
 
 
-    # Numbers
-    - match: '\b(-)?[0-9.e]+\b'
-      scope: constant.numeric.bzw
 
   line_comment:
     - meta_scope: comment.line.bzw
