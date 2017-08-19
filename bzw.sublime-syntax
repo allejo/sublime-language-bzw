@@ -101,11 +101,11 @@ contexts:
 
 
     # Options Block Settings
-    - match: '(-)\b(a|adminlagannounce|admsg|advertise|autoTeam|b|c|cr|density|disableBots|f|fb|g|h|handicap|help|helpmsg|j|jitterdrop|jitterwarn|lagannounce|lagdrop|lagwarn|maxidle|mp|mps|ms|mts|offa|packetlossdrop|packetlosswarn|poll|q||rabbit|s|sa|sb|set|sl|spamtime|spamwarn|speedtol|srvmsg|st|sw|synctime|t|tftimeout|time|timemanual|tk|printscore|tkkr|trackplayhistory|vars|worldsize)\b'
-      scope: constant.language.bzw
+    - match: '(-(?:a|adminlagannounce|admsg|advertise|autoTeam|b|c|cr|density|disableBots|f|fb|g|h|handicap|help|helpmsg|j|jitterdrop|jitterwarn|lagannounce|lagdrop|lagwarn|maxidle|mp|mps|ms|mts|offa|packetlossdrop|packetlosswarn|poll|q|rabbit|s|sa|sb|set|sl|spamtime|spamwarn|speedtol|srvmsg|st|sw|synctime|t|tftimeout|time|timemanual|tk|printscore|tkkr|trackplayhistory|vars|worldsize))\b'
+      scope: constant.language.bzw, meta.options.bzw
 
-    - match: '(\+)\b(f|r|s)\b'
-      scope: constant.language.bzw
+    - match: '(\+(?:f|r|s))\b'
+      scope: constant.language.bzw, meta.options.bzw
 
 
 
