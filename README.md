@@ -6,4 +6,4 @@ A [Sublime Text](https://www.sublimetext.com/) language syntax definition for [B
 
 with [Package Control](https://packagecontrol.io/)
 
-- Run the "Package Control: Install Package" command, find and install the BZW package.
+- Run the "Package Control: Install Package" command, find and install the "[BZW Language](https://packagecontrol.io/packages/BZW%20Language)" package.
