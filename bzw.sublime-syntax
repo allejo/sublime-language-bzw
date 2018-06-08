@@ -99,6 +99,10 @@ contexts:
     - match: '(-?\d*\.{0,1}\d+)\b'
       scope: constant.numeric.bzw
 
+    # Strings
+    - match: '\s"(.+)?"\s'
+      scope: string.quoted.double.bzw
+
 
     # Options Block Settings
     - match: '(-(?:a|adminlagannounce|admsg|advertise|autoTeam|b|c|cr|density|disableBots|f|fb|g|h|handicap|help|helpmsg|j|jitterdrop|jitterwarn|lagannounce|lagdrop|lagwarn|maxidle|mp|mps|ms|mts|noTeamKills|offa|packetlossdrop|packetlosswarn|poll|publictitle|q|rabbit|s|sa|sb|set|sl|spamtime|spamwarn|speedtol|srvmsg|st|sw|synctime|t|tftimeout|time|timemanual|tk|printscore|tkkr|trackplayhistory|vars|worldsize))\b'
