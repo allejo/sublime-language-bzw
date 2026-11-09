@@ -100,7 +100,7 @@ contexts:
       scope: constant.numeric.bzw
 
     # Strings
-    - match: '\s"(.+)?"\s'
+    - match: '"[^"]*"'
       scope: string.quoted.double.bzw
 
 
