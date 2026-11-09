@@ -96,7 +96,7 @@ contexts:
 
 
     # Numbers
-    - match: '(-?\d*\.{0,1}\d+)\b'
+    - match: '(?<!\w)(-?\d*\.?\d+)\b'
       scope: constant.numeric.bzw
 
     # Strings
